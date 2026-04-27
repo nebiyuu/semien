@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trek the Simien Mountains | Local Guide, Full Support | Hike Simiens</title>
+<meta name="description" content="Trek the Simien Mountains with a licensed local guide from Gondar, Ethiopia. 1 to 10-day hiking tours, fully equipped. Gelada baboons, dramatic escarpments, real wilderness.">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #3B6D11;
+    --green-light: #EAF3DE;
+    --green-mid: #639922;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --amber-mid: #EF9F27;
+    --text: #2C2C2A;
+    --text-muted: #5F5E5A;
+    --bg: #FAFAF8;
+    --bg-card: #FFFFFF;
+    --border: rgba(0,0,0,0.08);
+    --whatsapp: #25D366;
+    --whatsapp-dark: #128C7E;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(250,250,248,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    background: var(--whatsapp);
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--green); }
+
+  /* HERO */
+  .hero {
+    margin-top: 60px;
+    min-height: 92vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0.1) 55%, rgba(0,0,0,0.55) 100%),
+      url('photos/image.png') center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 28%),
+      linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.44) 100%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-whatsapp {
+    background: var(--whatsapp);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+  }
+
+  .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
+
+  .btn-email {
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.7);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+
+  .btn-email:hover { background: rgba(255,255,255,0.28); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* SECTIONS */
+  section { padding: 6rem 1.5rem; }
+  .container { max-width: 1080px; margin: 0 auto; }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 0.75rem;
+  }
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* HOOK */
+  .hook { background: var(--green-light); text-align: center; }
+  .hook h2 { max-width: 680px; margin: 0 auto 1rem; }
+  .hook .section-intro { margin: 0 auto 0; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stat {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* INCLUDED */
+  .included { background: white; }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .included-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .included-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+  }
+
+  .included-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--green-light);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .included-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .included-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* TREKS */
+  .treks { background: var(--bg); }
+
+  .trek-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .trek-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .trek-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.09); transform: translateY(-2px); }
+
+  .trek-card.featured { border: 2px solid var(--green-mid); }
+
+  .trek-header {
+    padding: 1.5rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .trek-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 0.75rem;
+  }
+
+  .badge-popular {
+    background: var(--green-light);
+    color: var(--green);
+  }
+
+  .badge-intro {
+    background: var(--amber-light);
+    color: var(--amber);
+  }
+
+  .badge-custom {
+    background: #EDE9FE;
+    color: #534AB7;
+  }
+
+  .trek-days {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .trek-name {
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  .trek-body { padding: 1.25rem 1.5rem; flex: 1; }
+
+  .trek-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+  }
+
+  .trek-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .trek-features li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--green-mid);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .trek-cta {
+    display: block;
+    text-align: center;
+    background: var(--whatsapp);
+    color: white;
+    text-decoration: none;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+
+  .trek-card.featured .trek-cta { background: var(--green); }
+  .trek-card.featured .trek-cta:hover { background: var(--green-mid); }
+  .trek-cta:hover { background: var(--whatsapp-dark); }
+
+  /* WILDLIFE */
+  .wildlife { background: var(--text); color: white; }
+  .wildlife h2 { color: white; }
+  .wildlife .section-intro { color: rgba(255,255,255,0.7); }
+  .wildlife .section-label { color: var(--amber-mid); }
+
+  .wildlife-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .wildlife-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .wildlife-emoji { font-size: 2.5rem; margin-bottom: 0.75rem; }
+
+  .wildlife-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .wildlife-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  /* GUIDE */
+  .guide { background: white; }
+
+  .guide-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (max-width: 640px) {
+    .guide-inner { grid-template-columns: 1fr; }
+  }
+
+  .guide-photo {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: var(--green-light);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  }
+
+  .guide-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .guide-name {
+    font-family: 'Lora', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .guide-role {
+    font-size: 14px;
+    color: var(--green-mid);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .guide-bio {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  /* REVIEWS */
+  .reviews { background: var(--green-light); }
+
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .review-card {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.08);
+  }
+
+  .review-stars {
+    color: var(--amber-mid);
+    font-size: 16px;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .review-author {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .review-country {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* BOOKING */
+  .booking { background: var(--bg); text-align: center; }
+  .booking h2 { max-width: 560px; margin: 0 auto 0.75rem; }
+  .booking .section-intro { margin: 0 auto 2.5rem; }
+
+  .booking-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .booking-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  }
+
+  .booking-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .booking-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .booking-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .booking-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .booking-btn:hover { opacity: 0.88; }
+
+  .booking-btn.wa { background: var(--whatsapp); color: white; }
+  .booking-btn.em { background: var(--green); color: white; }
+
+  /* FOOTER */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 13px;
+  }
+
+  footer a { color: rgba(255,255,255,0.6); }
+
+  /* SVG icons */
+  .icon-svg { width: 18px; height: 18px; display: inline-block; vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">Hike Simiens</a>
+  <div class="nav-links">
+    <a href="#included">Included</a>
+    <a href="#treks">Treks</a>
+    <a href="#wildlife">Wildlife</a>
+    <a href="#booking">Book</a>
+  </div>
+  <a class="nav-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20book%20a%20Simien%20Mountains%20trek." target="_blank">
+    <svg class="icon-svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.348-1.501A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.383l-.36-.214-3.768.891.94-3.664-.235-.376A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+    Book via WhatsApp
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">🇪🇹 Gondar, Ethiopia</span>
+    <h1>Trek the Simien Mountains<br>with a Local Expert</h1>
+    <p class="hero-sub">Gondar-based. Fully equipped. 1 to 10 days.<br>Gelada baboons, dramatic escarpments, real wilderness.</p>
+    <div class="hero-btns">
+      <a class="btn-whatsapp" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20plan%20a%20Simien%20Mountains%20trek." target="_blank">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.348-1.501A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.383l-.36-.214-3.768.891.94-3.664-.235-.376A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        Plan my trek
+      </a>
+      <a class="btn-email" href="mailto:info@hikesimiens.com">
+        ✉️ Send an email
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll to explore</span>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 9l5 4 5-4" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<!-- HOOK -->
+<section class="hook">
+  <div class="container">
+    <div class="section-label">Why trek with us</div>
+    <h2>You show up. We handle everything else.</h2>
+    <p class="section-intro">No logistics headaches, no guesswork. Ginbie and his crew manage your entire expedition — so you can focus on the mountain.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years guiding</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1–10</div>
+        <div class="stat-label">Day treks available</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Custom itineraries</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">★ 4.9</div>
+        <div class="stat-label">TripAdvisor rated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section id="included" class="included">
+  <div class="container">
+    <div class="section-label">What's included</div>
+    <h2>Everything you need on the mountain</h2>
+    <p class="section-intro">Your trek includes the full support system — not just a guide. Here's exactly what comes with every expedition.</p>
+    <div class="included-grid">
+      <div class="included-item">
+        <div class="included-icon">🧭</div>
+        <div>
+          <div class="included-title">Licensed mountain guide</div>
+          <div class="included-desc">Ginbie — certified, experienced, English-speaking</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🛡️</div>
+        <div>
+          <div class="included-title">Park scout</div>
+          <div class="included-desc">Mandatory in Simien Mountains National Park — included</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🍲</div>
+        <div>
+          <div class="included-title">Cook &amp; all meals</div>
+          <div class="included-desc">Fresh food prepared at camp every day</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">⛺</div>
+        <div>
+          <div class="included-title">Tents &amp; sleeping gear</div>
+          <div class="included-desc">Full camping setup, carried and erected for you</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🐴</div>
+        <div>
+          <div class="included-title">Mules &amp; porters</div>
+          <div class="included-desc">Your gear moves so you don't have to carry it</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🚗</div>
+        <div>
+          <div class="included-title">Transport from Gondar</div>
+          <div class="included-desc">Pickup and drop-off from Gondar / Debark included</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREK TIERS -->
+<section id="treks" class="treks">
+  <div class="container">
+    <div class="section-label">Simien Mountains hiking tours</div>
+    <h2>Choose your trek length</h2>
+    <p class="section-intro">All treks are flexible and built around your schedule. These are starting points — not fixed packages.</p>
+    <div class="trek-grid">
+      <div class="trek-card">
+        <div class="trek-header">
+          <span class="trek-badge badge-intro">Quick taste</span>
+          <div class="trek-days">2–3 days</div>
+          <div class="trek-name">Highlights trek</div>
+        </div>
+        <div class="trek-body">
+          <ul class="trek-features">
+            <li>Sankaber &amp; Gich camp</li>
+            <li>Gelada baboon herds</li>
+            <li>Escarpment viewpoints</li>
+            <li>Full cook &amp; crew included</li>
+          </ul>
+          <a class="trek-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27m%20interested%20in%20a%202-3%20day%20Simien%20Mountains%20trek." target="_blank">Ask about this trek</a>
+        </div>
+      </div>
+      <div class="trek-card featured">
+        <div class="trek-header">
+          <span class="trek-badge badge-popular">⭐ Most popular</span>
+          <div class="trek-days">4–6 days</div>
+          <div class="trek-name">Full experience trek</div>
+        </div>
+        <div class="trek-body">
+          <ul class="trek-features">
+            <li>Sankaber, Gich &amp; Chenek camps</li>
+            <li>Gelada baboons &amp; Walia ibex</li>
+            <li>Ras Dashen summit option</li>
+            <li>Best wildlife &amp; scenery balance</li>
+            <li>Full cook, mules &amp; crew</li>
+          </ul>
+          <a class="trek-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27m%20interested%20in%20a%204-6%20day%20Simien%20Mountains%20trek." target="_blank">Book this trek</a>
+        </div>
+      </div>
+      <div class="trek-card">
+        <div class="trek-header">
+          <span class="trek-badge badge-custom">Custom</span>
+          <div class="trek-days">7–10 days</div>
+          <div class="trek-name">Full expedition</div>
+        </div>
+        <div class="trek-body">
+          <ul class="trek-features">
+            <li>Ras Dashen summit (4550m)</li>
+            <li>Remote wilderness camps</li>
+            <li>Ethiopian wolf habitat</li>
+            <li>Fully tailor-made itinerary</li>
+          </ul>
+          <a class="trek-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20plan%20a%20custom%20Simien%20Mountains%20expedition." target="_blank">Plan my expedition</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WILDLIFE -->
+<section id="wildlife" class="wildlife">
+  <div class="container">
+    <div class="section-label">Wildlife &amp; nature</div>
+    <h2>What you'll see on the mountain</h2>
+    <p class="section-intro">The Simien Mountains are a UNESCO World Heritage site and home to some of Africa's rarest animals.</p>
+    <div class="wildlife-grid">
+      <div class="wildlife-card">
+        <div class="wildlife-emoji">🦁</div>
+        <div class="wildlife-name">Gelada baboons</div>
+        <div class="wildlife-desc">Herds of hundreds. Almost guaranteed on every trek.</div>
+      </div>
+      <div class="wildlife-card">
+        <div class="wildlife-emoji">🐐</div>
+        <div class="wildlife-name">Walia ibex</div>
+        <div class="wildlife-desc">Endangered mountain goats found only here.</div>
+      </div>
+      <div class="wildlife-card">
+        <div class="wildlife-emoji">🐺</div>
+        <div class="wildlife-name">Ethiopian wolf</div>
+        <div class="wildlife-desc">One of the world's rarest canids. Spotted on longer treks.</div>
+      </div>
+      <div class="wildlife-card">
+        <div class="wildlife-emoji">🏔️</div>
+        <div class="wildlife-name">Dramatic escarpments</div>
+        <div class="wildlife-desc">1500m drops, jagged peaks, and endless highland views.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="guide">
+  <div class="container">
+    <div class="guide-inner">
+      <div class="guide-photo">
+        <img src="photos/Ginbie.png" alt="Ginbie - local Simien Mountains trekking guide" onerror="this.style.display='none'">
+      <!--<span style="position:absolute">🧭</span>-->
+      </div>
+      <div>
+        <div class="section-label">Your guide</div>
+        <div class="guide-name">Ginbie</div>
+        <div class="guide-role">Licensed Simien Mountains Guide · Based in Gondar</div>
+        <p class="guide-bio">
+          Born and raised near the Simien Mountains, Ginbie has spent over a decade guiding trekkers through one of Ethiopia's most dramatic landscapes. He knows every trail, every camp, and every wildlife spot — and he speaks English fluently.
+        </p>
+        <p class="guide-bio">
+          When you trek with Ginbie, you're not booking a tour company. You're trekking with someone who genuinely loves this mountain and wants to share it.
+        </p>
+        <a class="btn-whatsapp" href="https://wa.me/251900000000?text=Hi%20Ginbie!" target="_blank" style="display: inline-flex; font-size: 15px; padding: 12px 22px;">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.348-1.501A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.383l-.36-.214-3.768.891.94-3.664-.235-.376A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+          Say hello
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="section-label">Traveler reviews</div>
+    <h2>What trekkers are saying</h2>
+    <p class="section-intro">Real reviews from real travelers. From TripAdvisor and Google.</p>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Ginbie made our Simien Mountains trek completely stress-free. Everything was set up before we arrived at camp. The food was incredible, the scenery was jaw-dropping."</p>
+        <div class="review-author">Sarah M.</div>
+        <div class="review-country">🇬🇧 United Kingdom</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We saw hundreds of Gelada baboons on day one. Ginbie knew exactly where to find them. Best wildlife experience of my life — and I've been to the Serengeti."</p>
+        <div class="review-author">Marcus T.</div>
+        <div class="review-country">🇩🇪 Germany</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was nervous about a 6-day camping trek but everything was handled. Ginbie adapted the route when I was tired and pushed me when I could handle more. Perfect guide."</p>
+        <div class="review-author">Aiko R.</div>
+        <div class="review-country">🇯🇵 Japan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section id="booking" class="booking">
+  <div class="container">
+    <div class="section-label">Get in touch</div>
+    <h2>Ready to trek the Simien Mountains?</h2>
+    <p class="section-intro">Tell Ginbie your dates and group size. He'll put together a trek that fits you.</p>
+    <div class="booking-cards">
+      <div class="booking-card">
+        <div class="booking-icon">💬</div>
+        <div class="booking-title">WhatsApp</div>
+        <div class="booking-sub">Fastest response. Usually within a few hours.</div>
+        <a class="booking-btn wa" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20plan%20a%20Simien%20Mountains%20trek." target="_blank">Message on WhatsApp</a>
+      </div>
+      <div class="booking-card">
+        <div class="booking-icon">✉️</div>
+        <div class="booking-title">Email</div>
+        <div class="booking-sub">Great for longer questions or detailed planning.</div>
+        <a class="booking-btn em" href="mailto:info@hikesimiens.com">Send an email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Hike Simiens · Simien Mountain Trekking Tours · Gondar, Ethiopia</p>
+  <p style="margin-top: 6px;">Licensed guide · Simien Mountains National Park · <a href="mailto:info@hikesimiens.com">info@hikesimiens.com</a></p>
+</footer>
+
+</body>
+</html>
