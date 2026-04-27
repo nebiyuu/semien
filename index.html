@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trek the Simien Mountains | Local Guide, Full Support | Hike Simiens</title>
-<meta name="description" content="Trek the Simien Mountains with a licensed local guide from Gondar, Ethiopia. 1 to 10-day hiking tours, fully equipped. Gelada baboons, dramatic escarpments, real wilderness.">
+<title>Ethiopia Tours with a Local Guide | Simien Mountains, Lalibela, Danakil & More</title>
+<meta name="description" content="Explore Ethiopia with Ginbie — a licensed local guide from Gondar. Simien Mountains trekking, Lalibela, Danakil Depression, Gondar Castle & more. Fully equipped, 100% custom.">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
@@ -276,53 +276,62 @@
   }
 
   /* INCLUDED */
-  .included { background: white; }
+  .included { background: var(--green); }
+  .included h2 { color: white; }
+  .included .section-label { color: var(--amber-mid); }
+  .included .section-intro { color: rgba(255,255,255,0.75); }
 
   .included-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .included-grid { grid-template-columns: 1fr; }
   }
 
   .included-item {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 1.5rem;
     display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    align-items: center;
+    gap: 16px;
+    padding: 1.25rem 1.5rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: background 0.2s;
   }
 
-  .included-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
-  }
+  .included-item:hover { background: rgba(255,255,255,0.07); }
+
+  .included-item:nth-child(2n) { border-right: none; }
+  .included-item:nth-last-child(-n+2) { border-bottom: none; }
 
   .included-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--green-light);
-    border-radius: 14px;
+    width: 42px;
+    height: 42px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 20px;
     flex-shrink: 0;
   }
 
   .included-title {
     font-weight: 700;
     font-size: 14px;
-    color: var(--text);
+    color: white;
     margin-bottom: 2px;
   }
 
   .included-desc {
     font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.5;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.45;
   }
 
   /* TREKS */
@@ -626,6 +635,126 @@
   .booking-btn.wa { background: var(--whatsapp); color: white; }
   .booking-btn.em { background: var(--green); color: white; }
 
+  /* DESTINATIONS */
+  .destinations { background: var(--bg); }
+
+  .dest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 680px) {
+    .dest-grid { grid-template-columns: 1fr; }
+  }
+
+  .dest-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dest-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  }
+
+  .dest-thumb {
+    width: 100%;
+    aspect-ratio: 5/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dest-thumb.simien  { background: linear-gradient(135deg, #2d5a1b 0%, #5a8a2a 100%); }
+  .dest-thumb.lalibela { background: linear-gradient(135deg, #7a3c00 0%, #c47020 100%); }
+  .dest-thumb.danakil  { background: linear-gradient(135deg, #8B1a00 0%, #E84c00 100%); }
+  .dest-thumb.gondar   { background: linear-gradient(135deg, #1a3060 0%, #3060b0 100%); }
+
+  .dest-thumb-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 14px 8px;
+    text-align: left;
+  }
+
+  .dest-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dest-name {
+    font-family: 'Lora', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+
+  .dest-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .dest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .dest-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: var(--green-light);
+    color: var(--green);
+  }
+
+  .dest-tag.amber { background: var(--amber-light); color: var(--amber); }
+  .dest-tag.red   { background: #FEE2E2; color: #991B1B; }
+  .dest-tag.blue  { background: #DBEAFE; color: #1D4ED8; }
+
+  .dest-cta {
+    display: block;
+    text-align: center;
+    background: var(--green-light);
+    color: var(--green);
+    text-decoration: none;
+    padding: 9px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .dest-cta:hover {
+    background: var(--green);
+    color: white;
+  }
+
   /* FOOTER */
   footer {
     background: var(--text);
@@ -646,6 +775,7 @@
 <nav>
   <a class="nav-logo" href="#">Hike Simiens</a>
   <div class="nav-links">
+    <a href="#destinations">Destinations</a>
     <a href="#included">Included</a>
     <a href="#treks">Treks</a>
     <a href="#wildlife">Wildlife</a>
@@ -661,8 +791,8 @@
 <section class="hero">
   <div class="hero-inner">
     <span class="hero-badge">🇪🇹 Gondar, Ethiopia</span>
-    <h1>Trek the Simien Mountains<br>with a Local Expert</h1>
-    <p class="hero-sub">Gondar-based. Fully equipped. 1 to 10 days.<br>Gelada baboons, dramatic escarpments, real wilderness.</p>
+    <h1>Explore Ethiopia<br>with a Local Expert</h1>
+    <p class="hero-sub">Simien Mountains · Lalibela · Danakil Depression · Gondar<br>Gondar-based. Fully equipped. 100% custom tours.</p>
     <div class="hero-btns">
       <a class="btn-whatsapp" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20plan%20a%20Simien%20Mountains%20trek." target="_blank">
         <svg class="icon-svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.348-1.501A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.383l-.36-.214-3.768.891.94-3.664-.235-.376A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
@@ -679,20 +809,100 @@
   </div>
 </section>
 
+<!-- DESTINATIONS -->
+<section id="destinations" class="destinations">
+  <div class="container">
+    <div class="section-label">Where we go</div>
+    <h2>Ethiopia's most iconic destinations</h2>
+    <p class="section-intro">Ginbie takes you beyond the mountains — covering all of Ethiopia's northern highlights as a single, seamless tour or individual trips.</p>
+    <div class="dest-grid">
+
+      <div class="dest-card">
+        <div class="dest-thumb simien">
+          🏔️
+          <div class="dest-thumb-label">Trekking</div>
+        </div>
+        <div class="dest-body">
+          <div class="dest-name">Simien Mountains</div>
+          <p class="dest-desc">A UNESCO World Heritage Site of jagged peaks, 1,500 m escarpments, and endemic wildlife. Home to Gelada baboons, Walia ibex, and the Ethiopian wolf — and one of Africa's most dramatic highland landscapes.</p>
+          <div class="dest-tags">
+            <span class="dest-tag">1–10 days</span>
+            <span class="dest-tag">UNESCO</span>
+            <span class="dest-tag">Trekking</span>
+          </div>
+          <a class="dest-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20plan%20a%20Simien%20Mountains%20trek." target="_blank">Plan a Simien trek</a>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-thumb lalibela">
+          ⛪
+          <div class="dest-thumb-label">Historical</div>
+        </div>
+        <div class="dest-body">
+          <div class="dest-name">Lalibela</div>
+          <p class="dest-desc">Known as the "Jerusalem of Africa," Lalibela's 11 medieval rock-hewn churches are carved entirely from solid red volcanic rock. Still active pilgrimage sites, they are among the most awe-inspiring monuments on the continent.</p>
+          <div class="dest-tags">
+            <span class="dest-tag amber">1–2 days</span>
+            <span class="dest-tag amber">UNESCO</span>
+            <span class="dest-tag amber">Churches</span>
+          </div>
+          <a class="dest-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20visit%20Lalibela." target="_blank">Ask about Lalibela</a>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-thumb danakil">
+          🌋
+          <div class="dest-thumb-label">Adventure</div>
+        </div>
+        <div class="dest-body">
+          <div class="dest-name">Danakil Depression</div>
+          <p class="dest-desc">One of the hottest, lowest, and most otherworldly places on Earth. Neon-yellow sulphur springs, salt flats, the Erta Ale lava lake — the Danakil is raw, brutal, and utterly unforgettable. Not for the faint-hearted.</p>
+          <div class="dest-tags">
+            <span class="dest-tag red">3–4 days</span>
+            <span class="dest-tag red">Extreme</span>
+            <span class="dest-tag red">Volcano</span>
+          </div>
+          <a class="dest-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20visit%20the%20Danakil%20Depression." target="_blank">Ask about Danakil</a>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <div class="dest-thumb gondar">
+          🏰
+          <div class="dest-thumb-label">Historical</div>
+        </div>
+        <div class="dest-body">
+          <div class="dest-name">Gondar Castle</div>
+          <p class="dest-desc">The Royal Enclosure of Gondar is a UNESCO-listed complex of 17th-century imperial castles and palaces — often called the "Camelot of Africa." Many Ethiopia tours start here, and Ginbie is based right in the city.</p>
+          <div class="dest-tags">
+            <span class="dest-tag blue">Half–1 day</span>
+            <span class="dest-tag blue">UNESCO</span>
+            <span class="dest-tag blue">Castles</span>
+          </div>
+          <a class="dest-cta" href="https://wa.me/251900000000?text=Hi%20Ginbie!%20I%27d%20like%20to%20visit%20Gondar%20Castle." target="_blank">Ask about Gondar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- HOOK -->
 <section class="hook">
   <div class="container">
-    <div class="section-label">Why trek with us</div>
+    <div class="section-label">Why tour with us</div>
     <h2>You show up. We handle everything else.</h2>
-    <p class="section-intro">No logistics headaches, no guesswork. Ginbie and his crew manage your entire expedition — so you can focus on the mountain.</p>
+    <p class="section-intro">No logistics headaches, no guesswork. Ginbie and his crew manage your entire expedition — whether it's a mountain trek, a rock-church pilgrimage, or a volcano tour.</p>
     <div class="stats">
       <div class="stat">
         <div class="stat-num">10+</div>
         <div class="stat-label">Years guiding</div>
       </div>
       <div class="stat">
-        <div class="stat-num">1–10</div>
-        <div class="stat-label">Day treks available</div>
+        <div class="stat-num">4</div>
+        <div class="stat-label">Iconic destinations</div>
       </div>
       <div class="stat">
         <div class="stat-num">100%</div>
@@ -762,9 +972,9 @@
 <!-- TREK TIERS -->
 <section id="treks" class="treks">
   <div class="container">
-    <div class="section-label">Simien Mountains hiking tours</div>
+    <div class="section-label">Simien Mountains trekking</div>
     <h2>Choose your trek length</h2>
-    <p class="section-intro">All treks are flexible and built around your schedule. These are starting points — not fixed packages.</p>
+    <p class="section-intro">All Simien treks are flexible and built around your schedule. These are starting points — not fixed packages. Combine with Lalibela, Gondar, or Danakil for a full northern circuit.</p>
     <div class="trek-grid">
       <div class="trek-card">
         <div class="trek-header">
@@ -910,8 +1120,8 @@
 <section id="booking" class="booking">
   <div class="container">
     <div class="section-label">Get in touch</div>
-    <h2>Ready to trek the Simien Mountains?</h2>
-    <p class="section-intro">Tell Ginbie your dates and group size. He'll put together a trek that fits you.</p>
+    <h2>Ready to explore Ethiopia?</h2>
+    <p class="section-intro">Tell Ginbie your dates, destinations, and group size. He'll put together an itinerary that fits you perfectly.</p>
     <div class="booking-cards">
       <div class="booking-card">
         <div class="booking-icon">💬</div>
@@ -930,8 +1140,8 @@
 </section>
 
 <footer>
-  <p>© 2026 Hike Simiens · Simien Mountain Trekking Tours · Gondar, Ethiopia</p>
-  <p style="margin-top: 6px;">Licensed guide · Simien Mountains National Park · <a href="mailto:info@hikesimiens.com">info@hikesimiens.com</a></p>
+  <p>© 2026 Hike Simiens · Ethiopia Trekking & Tours · Gondar, Ethiopia</p>
+  <p style="margin-top: 6px;">Licensed guide · Simien Mountains · Lalibela · Danakil Depression · Gondar · <a href="mailto:info@hikesimiens.com">info@hikesimiens.com</a></p>
 </footer>
 
 </body>
