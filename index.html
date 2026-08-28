@@ -130,21 +130,35 @@
   }
 
   .nav-links a:hover { color: var(--green); }
+.hero {
+  margin-top: 60px;
+  min-height: 92vh;
 
-  .hero {
-    margin-top: 60px;
-    min-height: 92vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0.1) 55%, rgba(0,0,0,0.55) 100%),
-      url('photos/image.jpg') center/cover no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 3rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.24) 0%,
+      rgba(0,0,0,0.1) 55%,
+      rgba(0,0,0,0.55) 100%
+    ),
+    image-set(
+      url('photos/image.avif') type('image/avif'),
+      url('photos/image.webp') type('image/webp')
+    );
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
 
   .hero::before {
     content: '';
